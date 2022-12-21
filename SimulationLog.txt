@@ -1,0 +1,16 @@
+Design1
+0. Fixex r = 130, nUSRN = 3.1, nSiO2 = 1.44, h = 300
+1. Sweep lattice constant a = linspace(300,500,501) => select a = 406
+2. Sweep s1shift at a=406
+	s1xList = np.linspace(0,200,11)
+	s1yList = np.linspace(-200,200,21) => select (s1x, s1y) = (60, -180)
+3. At (s1x, s1y) = (60, -180), sweep lattice constant a = linspace(300,500,501) => a = 396
+4. Sweep s1shift at a=396
+	s1xList = np.linspace(-25,25,11)+60
+	s1yList = np.linspace(-25,25,11)-180 => (s1x, s1y) = (65, -185)
+5. Sweep s2shift at (s1x, s1y) = (65, -185)
+	s2xList = np.linspace(0,200,11)
+	s2yList = np.linspace(-200,200,21) => select (s2x, s2y) = (50, -35)
+(a, r, s1x, s1y, s2x, s2y) = (396, 130, 65, -185, 60, -40)
+
+Design2 (a, r, s1x, s1y, s2x, s2y) = (396, 130, -155, 85, 0, 0)
